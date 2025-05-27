@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WW3 Meme Coin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0b0c10;
+      color: #f0f0f0;
+      background-image: url('https://i.imgur.com/FKZ3P8z.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    header {
+      text-align: center;
+      padding: 120px 20px 60px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    h1 {
+      font-size: 4em;
+      margin-bottom: 0.2em;
+    }
+    .launch-button {
+      background: #ff1e1e;
+      color: white;
+      padding: 20px 50px;
+      font-size: 1.7em;
+      border: none;
+      border-radius: 12px;
+      animation: pulse 1.5s infinite;
+      cursor: pointer;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px red; }
+      50% { box-shadow: 0 0 30px red; }
+      100% { box-shadow: 0 0 10px red; }
+    }
+    section {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.85);
+    }
+    .tokenomics, .roadmap, .about, .links {
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: white;
+      font-size: 1.1em;
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 12px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #111;
+      font-size: 0.9em;
+    }
+    .links a {
+      color: #1DA1F2;
+      margin: 0 15px;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    .countdown {
+      text-align: center;
+      font-size: 2em;
+      margin: 40px 0;
+    }
+    .popup-alert {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      text-align: center;
+      padding-top: 200px;
+      font-size: 2em;
+      z-index: 1000;
+    }
+    .popup-alert button {
+      margin-top: 20px;
+      font-size: 1em;
+      padding: 10px 20px;
+      background: red;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // Countdown timer logic
+    function startCountdown(duration, display) {
+      let timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      const popup = document.getElementById('popup');
+      setTimeout(() => {
+        popup.style.display = 'block';
+      }, 3000);
+
+      const countdownDisplay = document.querySelector('#countdown');
+      startCountdown(1800, countdownDisplay);
+    }
+  </script>
+</head>
+<body>
+  <div class="popup-alert" id="popup">
+    🚨 WW3 INITIATED. ARE YOU READY TO FOMO?
+    <br />
+    <button onclick="window.open('https://dexscreener.com/solana','_blank')">ACCEPT MISSION</button>
+  </div>
+
+  <header>
+    <h1>WW3: World War 3</h1>
+    <p>One Button. Infinite Chaos. Solana's Final War Begins.</p>
+    <button class="launch-button" onclick="window.open('https://dexscreener.com/solana','_blank')">LAUNCH WW3</button>
+  </header>
+
+  <section class="countdown">
+    Next Meme Strike In: <span id="countdown">30:00</span>
+  </section>
+
+  <section class="about">
+    <h2>What Is WW3?</h2>
+    <p>WW3 is a Solana meme coin engineered for pure digital destruction. It’s more than a token — it’s an event. Join the chaos and become a general in the most unhinged crypto war ever unleashed.</p>
+  </section>
+
+  <section class="tokenomics">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li>💣 Total Supply: 1,000,000,000 WW3</li>
+      <li>🔥 0% Taxes</li>
+      <li>🧨 LP Burned Forever</li>
+      <li>🚫 Ownership Renounced</li>
+      <li>🎯 Fair Launch — No Presale</li>
+    </ul>
+  </section>
+
+  <section class="roadmap">
+    <h2>WW3 Roadmap</h2>
+    <table>
+      <tr><th>Phase</th><th>Mission Briefing</th></tr>
+      <tr><td>🚀 Launch Nukes</td><td>Deploy token, burn LP, unleash meme warfare</td></tr>
+      <tr><td>🧠 Meme Warfare</td><td>Twitter raids, Telegram bot, daily memes</td></tr>
+      <tr><td>📈 Global Fallout</td><td>Trend on DEXTools, partner with influencers</td></tr>
+      <tr><td>👾 WW3 Protocol</td><td>Mini-games, NFTs, AI meme bot</td></tr>
+    </table>
+  </section>
+
+  <section class="links">
+    <h2>Enlist in the Meme War</h2>
+    <p>
+      <a href="https://t.me/+u88ZWA24PTpiN2Ix">Telegram</a>
+      <a href="https://twitter.com/WW3CoinOfficialHQ">Twitter</a>
+      <a href="https://solscan.io">Solscan</a>
+      <a href="https://dexscreener.com/solana">Live Chart</a>
+    </p>
+    <iframe src="https://dexscreener.com/solana" width="100%" height="400" frameborder="0"></iframe>
+  </section>
+
+  <footer>
+    <p>This is a meme coin on Solana. Not financial advice. Nuclear memes may cause irreversible gains or losses.</p>
+  </footer>
+</body>
+</html>
